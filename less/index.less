@@ -66,4 +66,34 @@ html, body {
 @primaryColor: gray;
 @secondaryColor: orange;
 @fontColor: black;
+@font-stack: Arial, Verdana, Georgia, Times New Roman;
+
+
+
+
+
+
+/*style */
+
+.container {
+	color: @primaryColor;
+	font-family: @font-stack;
+}
+
+
+
+
+/* mixins */
+
+.spacing() {
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+.display() {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
 

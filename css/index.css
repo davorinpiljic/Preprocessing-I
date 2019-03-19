@@ -136,3 +136,9 @@ body {
   background-color: orange;
 }
 /* variables */
+/*style */
+.container {
+  color: gray;
+  font-family: Arial, Verdana, Georgia, Times New Roman;
+}
+/* mixins */
