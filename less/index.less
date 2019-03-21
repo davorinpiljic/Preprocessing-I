@@ -54,6 +54,109 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: orange;
 }
+
+
+
+
+/* variables */
+
+@primaryColor: orange;
+@secondaryColor: gray;
+@fontColor: black;
+@font-stack: Arial, Verdana, Georgia, Times New Roman;
+
+@mobileSize: max-width: 500px;
+
+
+
+
+/*style */
+.html {
+	font-size: 62.5%; 
+}
+
+
+.container {
+	color: @primaryColor;
+	background-color: @secondaryColor;
+	font-family: @font-stack;
+	.spacing();
+	
+
+	.top-nav {
+		.center(space-evenly);
+		border-bottom: 1px solid black;
+		.spacing();
+		
+	}
+
+
+	.intro {
+		.center(center);
+	}
+
+	.intro .top-intro {
+		.spacing();
+	}
+
+
+	.intro h2 {
+		font-size: 2rem;
+
+	}
+
+	.skills {
+		border: 1px solid black;
+		margin-bottom: 10px;
+		.center(center);
+		h2 {
+			font-size: 1.5rem;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			list-style-type: square;
+		}
+
+	}
+
+	.work-history {
+		.center(center);
+
+		table, th, td {
+			border: 1px solid black;
+			text-align: left;
+			padding: 5px;
+		}
+
+		th {
+			font-size: 1.250rem; 
+		}
+	
+	}
+	@media (@mobileView) {
+		color: red;
+	}
+
+}
+
+
+
+
+/* mixins */
+
+.spacing() {
+	padding: 10px;
+}
+
+.center(@justifyContent) {
+	display: flex;
+	flex-direction: row;
+	justify-content: @justifyContent;
+	align-items: center;
+}
+
 
